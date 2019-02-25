@@ -22,6 +22,7 @@ main.section
         @click="goToCategory(category.id)"
         :key="category.id"
         v-for="category of categories.entries"
+        data-test="category-li-element"
       )
         div.thread-side
           i.icon.fas.fa-tags
