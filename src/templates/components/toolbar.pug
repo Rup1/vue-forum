@@ -1,14 +1,8 @@
-nav(class="menu-top")
-  section.container
-    .links
-      a(
-        @click="goBack"
-        class="link"
-        v-if="back"
-      )
-        i.fas.fa-arrow-left
-      p.link {{title}}
-    a(v-if="getLogin" class="link" @click="logout" title="Logout")
-      i.fas.fa-user
-    router-link(v-else class="link" to="/login" title="Login")
-      i.fas.fa-user
+<nav class="menu-top">
+    <section class="container">
+        <div class="links"><a class="link" @click="goBack" v-if="back"><i class="fas fa-arrow-left"></i></a>
+            <p class="link">{{title}}</p>
+        </div><a class="link" v-if="getLogin" @click="logout" title="Logout"><i class="fas fa-user"></i></a>
+        <router-link class="link" v-else="v-else" to="/login" title="Login"><i class="fas fa-user"></i></router-link>
+    </section>
+</nav>
