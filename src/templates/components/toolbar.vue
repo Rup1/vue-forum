@@ -1,3 +1,5 @@
+<template>
+<div>
 <nav class="menu-top">
     <section class="container">
         <div class="links"><a class="link" @click="goBack" v-if="back"><i class="fas fa-arrow-left"></i></a>
@@ -6,3 +8,5 @@
         <router-link class="link" v-else="v-else" to="/login" title="Login"><i class="fas fa-user"></i></router-link>
     </section>
 </nav>
+</div>
+</tempalte>

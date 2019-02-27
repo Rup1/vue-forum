@@ -6,7 +6,7 @@ let Mutation = new Mutations()
 
 @Component({
   name: 'signup',
-  template: require('../templates/layouts/signup.pug')
+  template: require('../templates/layouts/signup.vue')
 })
 export default class Signup extends Vue {
   email: string = ''
@@ -14,7 +14,7 @@ export default class Signup extends Vue {
   name: string = ''
   username: string = ''
 
-  signup () {
+  signup() {
     this.$apollo
       .mutate({
         mutation: Mutation.createUser(),
@@ -34,7 +34,7 @@ export default class Signup extends Vue {
       })
   }
 
-  signin () {
+  signin() {
     this.$apollo
       .mutate({
         mutation: Mutation.authenticate(),

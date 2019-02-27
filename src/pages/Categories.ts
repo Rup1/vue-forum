@@ -14,13 +14,13 @@ let Query = new Queries()
   apollo: {
     categories: {
       query: Query.categories,
-      variables () {
+      variables() {
         return {
           page: this.page,
           perPage: this.perPage
         }
       },
-      error (error) {
+      error(error) {
         console.error('We\'ve got an error!', error)
       }
     }
@@ -29,7 +29,7 @@ let Query = new Queries()
     Toolbar
   },
   name: 'Categories',
-  template: require('../templates/pages/categories.pug')
+  template: require('../templates/pages/categories.vue')
 })
 export default class Categories extends Vue {
   @Getter('getLogin') getLogin: any
@@ -40,7 +40,7 @@ export default class Categories extends Vue {
   title: string = ''
   newCategoryMutation: any = Mutation.createCategory()
 
-  createCategory (mutate: any) {
+  createCategory(mutate: any) {
     if (this.title !== '') {
       mutate()
     } else {
@@ -48,32 +48,32 @@ export default class Categories extends Vue {
     }
   }
 
-  categorySuccess (result: any) {
+  categorySuccess(result: any) {
     alert('Category created successfully!')
     this.$apollo.queries.categories.refetch()
   }
 
-  categoryError (error: any) {
+  categoryError(error: any) {
     console.log(error)
   }
 
-  goToCategory (categoryId: string) {
+  goToCategory(categoryId: string) {
     this.$router.push(`/categories/${categoryId}`)
   }
 
-  prevPage () {
+  prevPage() {
     this.page = this.page - 1
     this.active = this.active - 1
   }
 
-  goToPage (pageNumber: number) {
+  goToPage(pageNumber: number) {
     if (pageNumber !== this.active) {
       this.page = pageNumber - 1
       this.active = pageNumber - 1
     }
   }
 
-  nextPage () {
+  nextPage() {
     this.page = this.page + 1
     this.active = this.active + 1
   }

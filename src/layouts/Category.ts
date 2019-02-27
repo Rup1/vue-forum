@@ -3,7 +3,7 @@ import Component from 'vue-class-component'
 
 @Component({
   name: 'Category',
-  template: require('../templates/layouts/Category.pug')
+  template: require('../templates/layouts/Category.vue')
 })
 export default class Category extends Vue {
 }

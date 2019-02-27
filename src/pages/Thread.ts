@@ -19,7 +19,7 @@ let Query = new Queries()
   props: {
     threadId: String
   },
-  template: require('../templates/pages/thread.pug')
+  template: require('../templates/pages/thread.vue')
 })
 export default class Thread extends Vue {
   @Getter('getLogin') getLogin

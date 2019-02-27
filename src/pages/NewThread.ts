@@ -12,7 +12,7 @@ let Mutation = new Mutations()
   components: {
     Toolbar
   },
-  template: require('../templates/pages/newThread.pug')
+  template: require('../templates/pages/newThread.vue')
 })
 export default class NewThread extends Vue {
   @Prop()
@@ -22,17 +22,17 @@ export default class NewThread extends Vue {
   title: string = ''
   postBody: any = ''
 
-  newThread (mutate: any) {
+  newThread(mutate: any) {
     if (this.title !== '' && this.postBody !== '') mutate()
     else alert('Error: Empty fields.')
   }
 
-  threadSuccess (result: any) {
+  threadSuccess(result: any) {
     alert('Thread created successfully')
     this.$router.push(`/categories/${this.id}/`)
   }
 
-  threadError (error: any) {
+  threadError(error: any) {
     alert(error)
   }
 }

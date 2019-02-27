@@ -49,14 +49,11 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "faker": "^4.1.0",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
     "raw-loader": "^0.5.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "ts-jest": "^23.0.0",
     "typescript": "^3.0.0",
-    "vue-cli-plugin-pug": "^1.0.7",
     "vue-template-compiler": "^2.5.17"
   }
 }

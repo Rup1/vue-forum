@@ -35,7 +35,6 @@
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "src/**/*.html",
-    "src/**/*.pug"
   ],
   "exclude": [
     "node_modules"

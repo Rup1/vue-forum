@@ -15,7 +15,7 @@ let Mutation = new Mutations()
     Toolbar,
     VueMarkdown
   },
-  template: require('../templates/pages/newPost.pug')
+  template: require('../templates/pages/newPost.vue')
 })
 export default class NewPost extends Vue {
   @Prop()
@@ -28,24 +28,24 @@ export default class NewPost extends Vue {
   newPostMutation: any = Mutation.createPost()
   timeF: any = new TimeFormat()
 
-  createPost (mutate: any) {
+  createPost(mutate: any) {
     if (this.postBody !== '') mutate()
     else alert('Error: Empty post')
   }
 
-  postSuccess (result: any) {
+  postSuccess(result: any) {
     if (result.data.createPost) this.$router.push(`/categories/${this.id}/threads/${this.threadId}`)
   }
 
-  postError (error: any) {
+  postError(error: any) {
     console.log(error)
   }
 
-  editPost () {
+  editPost() {
     this.preview = false
   }
 
-  previewPost () {
+  previewPost() {
     this.preview = true
   }
 }

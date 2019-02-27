@@ -6,13 +6,13 @@ let Mutation = new Mutations()
 
 @Component({
   name: 'login',
-  template: require('../templates/layouts/login.pug')
+  template: require('../templates/layouts/login.vue')
 })
 export default class Login extends Vue {
   email: string = ''
   password: string = ''
 
-  signin (): void {
+  signin(): void {
     this.$apollo
       .mutate({
         mutation: Mutation.authenticate(),

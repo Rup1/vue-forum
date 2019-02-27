@@ -8,18 +8,18 @@ import {
     title: String,
     back: Boolean
   },
-  template: require('../templates/components/toolbar.pug')
+  template: require('../templates/components/toolbar.vue')
 })
 export default class Toolbar extends Vue {
   @Getter('getLogin') getLogin: any
 
-  logout () {
+  logout() {
     localStorage.removeItem('token')
     this.$router.push('/login')
     alert('See you soon :)')
   }
 
-  goBack () {
+  goBack() {
     this.$router.go(-1)
   }
 }

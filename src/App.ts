@@ -7,11 +7,11 @@ import {
 
 @Component({
   name: 'app',
-  template: require('@/templates/App.pug')
+  template: require('@/templates/App.vue')
 })
 export default class App extends Vue {
   @Mutation('setLogin') setLogin
-  checkLogin (): void {
+  checkLogin(): void {
     if (localStorage.getItem('token')) {
       this.setLogin(true)
       if (this.$router.currentRoute.name === 'login' || this.$router.currentRoute.name === 'signup') {
@@ -28,7 +28,7 @@ export default class App extends Vue {
   }
 
   @Watch('$route', { immediate: true, deep: true })
-    onUrlChange (newVal: any) {
-      this.checkLogin()
-    }
+  onUrlChange(newVal: any) {
+    this.checkLogin()
+  }
 }
