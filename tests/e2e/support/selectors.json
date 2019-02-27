@@ -1,0 +1,11 @@
+{
+  "name": "[data-test=name]",
+  "email": "[data-test=email]",
+  "password": "[data-test=password]",
+  "username": "[data-test=username]",
+  "submit": "[data-test=btn]",
+  "categories": "[data-test=category-li-element]",
+  "threads": "[data-test=thread]",
+  "input": "input",
+  "btn": "button"
+}

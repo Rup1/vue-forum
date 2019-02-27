@@ -11,6 +11,7 @@ main.section
         placeholder="Name"
         type="text"
         v-model="name"
+        data-test="name"
       )
     fieldset.pure-u-1
       input.pure-u-1(
@@ -18,6 +19,7 @@ main.section
         placeholder="Email"
         type="email"
         v-model="email"
+        data-test="email"
       )
     fieldset.pure-1
       input.pure-u-1(
@@ -25,6 +27,7 @@ main.section
         placeholder="Password"
         type="password"
         v-model="password"
+        data-test="password"
       )
     fieldset.pure-u-1
       input.pure-u-1(
@@ -32,9 +35,11 @@ main.section
         placeholder="Username"
         type="text"
         v-model="username"
+        data-test="username"
       )
     fieldset
       button(
         class="pure-button pure-button-primary pure-input-1"
         type="submit"
+        data-test="btn"
       ) Sign up

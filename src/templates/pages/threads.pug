@@ -19,6 +19,7 @@ main.section
             :key="thread.id"
             v-for="thread of data.category.threads"
             v-if="data.category.threads"
+            data-test="thread"
           )
             div.thread-side
               i.icon.fas.fa-book-open
